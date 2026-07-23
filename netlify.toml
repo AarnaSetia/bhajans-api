@@ -15,3 +15,9 @@
   from = "/api/gemini"
   to = "/.netlify/functions/gemini"
   status = 200
+
+# Live "Save" commits the file to GitHub (Firebase-auth protected).
+[[redirects]]
+  from = "/api/save"
+  to = "/.netlify/functions/save"
+  status = 200

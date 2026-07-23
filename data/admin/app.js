@@ -240,22 +240,46 @@ $('save-btn').addEventListener('click', async () => {
   show(status);
 
   try {
+    // Attach the Firebase login token so the live save function can authorise.
+    const headers = { 'Content-Type': 'application/json' };
+    if (auth && auth.currentUser) {
+      headers.Authorization = `Bearer ${await auth.currentUser.getIdToken()}`;
+    }
+
     const res = await fetch('/api/save', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ id, lang, data: resultData }),
     });
+    const payload = await res.json().catch(() => ({}));
+
     if (res.ok) {
-      const { path } = await res.json();
       status.className = 'save-status ok';
-      status.textContent = `✓ Saved to ${path}`;
-    } else {
-      throw new Error(`status ${res.status}`);
+      if (payload.committed) {
+        const verb = payload.updated ? 'Updated' : 'Added';
+        status.innerHTML =
+          `✓ ${verb} <code>${escapeHtml(payload.path)}</code> in the repo. ` +
+          'Netlify will redeploy — it goes live in ~1–2 min.' +
+          (payload.htmlUrl ? ` <a href="${payload.htmlUrl}" target="_blank" rel="noopener">View on GitHub ↗</a>` : '');
+      } else {
+        status.textContent = `✓ Saved to ${payload.path}`;
+      }
+      return;
     }
-  } catch {
-    // Live static site can't write to the repo — fall back to download.
+
+    if (res.status === 401) {
+      // Auth problem — don't silently download; tell them to sign in.
+      status.className = 'save-status err';
+      status.textContent = payload.error || 'Not signed in. Please log in again and retry.';
+      return;
+    }
+    throw new Error(payload.error || `status ${res.status}`);
+  } catch (err) {
+    // Save unavailable/failed — fall back to a download so no work is lost.
     status.className = 'save-status warn';
-    status.innerHTML = 'Saving to disk isn\'t available on the live site. Use the tool locally, or <strong>download</strong> the file and commit it to <code>data/bhajans/'
+    status.innerHTML =
+      `Couldn't save automatically (${escapeHtml(err.message)}). ` +
+      'Downloading the file instead — commit it to <code>data/bhajans/'
       + escapeHtml(id) + '/' + escapeHtml(lang) + '.json</code>.';
     downloadJson();
   }
