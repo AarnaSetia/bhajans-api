@@ -1,0 +1,353 @@
+{
+  "id": "hanuman-chalisa",
+  "title": "Hanuman Chalisa",
+  "lyrics": [
+    {
+      "type": "doha",
+      "lines": [
+        "śrī guru charaṇa sarōja raja nijamana mukura sudhāri ।",
+        "varaṇau raghuvara vimalayaśa jō dāyaka phalachāri ॥"
+      ]
+    },
+    {
+      "type": "doha",
+      "lines": [
+        "buddhihīna tanujānikai sumirau pavana kumāra ।",
+        "bala buddhi vidyā dēhu mōhi harahu kalēśa vikāra ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "jaya hanumāna jñāna guṇa sāgara ।",
+        "jaya kapīśa tihu lōka ujāgara ॥ 1 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "rāmadūta atulita baladhāmā ।",
+        "añjani putra pavanasuta nāmā ॥ 2 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "mahāvīra vikrama bajaraṅgī ।",
+        "kumati nivāra sumati kē saṅgī ॥ 3 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 4,
+      "lines": [
+        "kañchana varaṇa virāja suvēśā ।",
+        "kānana kuṇḍala kuñchita kēśā ॥ 4 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 5,
+      "lines": [
+        "hāthavajra au dhvajā virājai ।",
+        "kānthē mūñja janēvū sājai ॥ 5 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 6,
+      "lines": [
+        "śaṅkara suvana kēsarī nandana ।",
+        "tēja pratāpa mahājaga vandana ॥ 6 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 7,
+      "lines": [
+        "vidyāvāna guṇī ati chātura ।",
+        "rāma kāja karivē kō ātura ॥ 7 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 8,
+      "lines": [
+        "prabhu charitra sunivē kō rasiyā ।",
+        "rāmalakhana sītā mana basiyā ॥ 8 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 9,
+      "lines": [
+        "sūkṣma rūpadhari siyahi dikhāvā ।",
+        "vikaṭa rūpadhari laṅka jalāvā ॥ 9 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 10,
+      "lines": [
+        "bhīma rūpadhari asura saṃhārē ।",
+        "rāmachandra kē kāja saṃvārē ॥ 10 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 11,
+      "lines": [
+        "lāya sañjīvana lakhana jiyāyē ।",
+        "śrī raghuvīra haraṣi uralāyē ॥ 11 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 12,
+      "lines": [
+        "raghupati kīnhī bahuta baḍāyī ।",
+        "tuma mama priya bharata sama bhāyī ॥ 12 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 13,
+      "lines": [
+        "sahasra vadana tumharō yaśagāvai ।",
+        "asa kahi śrīpati kaṇṭha lagāvai ॥ 13 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 14,
+      "lines": [
+        "sanakādika brahmādi munīśā ।",
+        "nārada śārada sahita ahīśā ॥ 14 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 15,
+      "lines": [
+        "yama kubēra digapāla jahāṃ tē ।",
+        "kavi kōvida kahi sakē kahāṃ tē ॥ 15 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 16,
+      "lines": [
+        "tuma upakāra sugrīvahi kīnhā ।",
+        "rāma milāya rājapada dīnhā ॥ 16 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 17,
+      "lines": [
+        "tumharō mantra vibhīṣaṇa mānā ।",
+        "laṅkēśvara bhayē saba jaga jānā ॥ 17 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 18,
+      "lines": [
+        "yuga sahasra yōjana para bhānū ।",
+        "līlyō tāhi madhura phala jānū ॥ 18 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 19,
+      "lines": [
+        "prabhu mudrikā mēli mukha māhī ।",
+        "jaladhi lāṅghi gayē acharaja nāhī ॥ 19 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 20,
+      "lines": [
+        "durgama kāja jagata kē jētē ।",
+        "sugama anugraha tumharē tētē ॥ 20 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 21,
+      "lines": [
+        "rāma duārē tuma rakhavārē ।",
+        "hōta na ājñā binu paisārē ॥ 21 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 22,
+      "lines": [
+        "saba sukha lahai tumhārī śaraṇā ।",
+        "tuma rakṣaka kāhū kō ḍara nā ॥ 22 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 23,
+      "lines": [
+        "āpana tēja samhārō āpai ।",
+        "tīnōṃ lōka hāṅka tē kāmpai ॥ 23 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 24,
+      "lines": [
+        "bhūta piśācha nikaṭa nahi āvai ।",
+        "mahavīra jaba nāma sunāvai ॥ 24 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 25,
+      "lines": [
+        "nāsai rōga harai saba pīrā ।",
+        "japata nirantara hanumata vīrā ॥ 25 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 26,
+      "lines": [
+        "saṅkaṭa sē hanumāna chuḍāvai ।",
+        "mana krama vachana dhyāna jō lāvai ॥ 26 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 27,
+      "lines": [
+        "saba para rāma tapasvī rājā ।",
+        "tinakē kāja sakala tuma sājā ॥ 27 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 28,
+      "lines": [
+        "aura manōratha jō kōyi lāvai ।",
+        "tāsu amita jīvana phala pāvai ॥ 28 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 29,
+      "lines": [
+        "chārō yuga pratāpa tumhārā ।",
+        "hai parasiddha jagata ujiyārā ॥ 29 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 30,
+      "lines": [
+        "sādhu santa kē tuma rakhavārē ।",
+        "asura nikandana rāma dulārē ॥ 30 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 31,
+      "lines": [
+        "aṣṭhasiddhi nava nidhi kē dātā ।",
+        "asa vara dīnha jānakī mātā ॥ 31 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 32,
+      "lines": [
+        "rāma rasāyana tumhārē pāsā ।",
+        "sadā rahō raghupati kē dāsā ॥ 32 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 33,
+      "lines": [
+        "tumharē bhajana rāmakō pāvai ।",
+        "janma janma kē dukha bisarāvai ॥ 33 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 34,
+      "lines": [
+        "anta kāla raghupati purajāyī ।",
+        "jahāṃ janma haribhakta kahāyī ॥ 34 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 35,
+      "lines": [
+        "aura dēvatā chitta na dharayī ।",
+        "hanumata sēyi sarva sukha karayī ॥ 35 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 36,
+      "lines": [
+        "saṅkaṭa kaṭai miṭai saba pīrā ।",
+        "jō sumirai hanumata bala vīrā ॥ 36 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 37,
+      "lines": [
+        "jai jai jai hanumāna gōsāyī ।",
+        "kṛpā karahu gurudēva kī nāyī ॥ 37 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 38,
+      "lines": [
+        "yaha śata vāra pāṭha kara kōyī ।",
+        "chūṭahi bandi mahā sukha hōyī ॥ 38 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 39,
+      "lines": [
+        "jō yaha paḍai hanumāna chālīsā ।",
+        "hōya siddhi sākhī gaurīśā ॥ 39 ॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 40,
+      "lines": [
+        "tulasīdāsa sadā hari chērā ।",
+        "kījai nātha hṛdaya maha ḍērā ॥ 40 ॥"
+      ]
+    },
+    {
+      "type": "doha",
+      "lines": [
+        "pavana tanaya saṅkaṭa haraṇa - maṅgala mūrati rūp ।",
+        "rāma lakhana sītā sahita - hṛdaya basahu surabhūp ॥"
+      ]
+    },
+    {
+      "type": "mangala",
+      "lines": [
+        "siyāvara rāmachandrakī jaya । pavanasuta hanumānakī jaya । bōlō bhāyī saba santanakī jaya ।"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "nammamma-sharade-uma-maheshwari",
+  "title": "NammammA shArade umA mahEshwarI",
+  "lyrics": [
+    {
+      "type": "dhyanam",
+      "lines": [
+        "NammammA shArade umA mahEshwarI",
+        "nimmoLagihanArammA",
+        "kammagOlana vairi sutanAda sonDila",
+        "hemmeya gaNanAthanE Kanamma"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "mOre kappina bhAva moradagalada kivi",
+        "kOredADeyanArammA",
+        "kOredADeyanArammA",
+        "mUrukaNNana suta muridiTTa chandrana",
+        "dhIra tA gaNanAthanE Kanamma"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "uTTa dattiyu pididuTTa chellaNada",
+        "dittanivanArammA",
+        "dittanivanArammA",
+        "paTTada rANi pArvatiya kumAranu",
+        "hoTTeya gaNanAthanE kanamma"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "Raashi vidyeya balla ramaNi haMbalanolla",
+        "bhaaShiganivanaaramma",
+        "bhaaShiganivanaaramma",
+        "lEsAgi janara salahuva kagineleyaadi",
+        "KEshava dAsa kaNE ammayya"
+      ]
+    },
+    {
+      "type": "verse",
+      "lines": [
+        "NammammA shArade umA mahEshwarI",
+        "nimmoLagihanArammA",
+        "kammagOlana vairi sutanAda sonDila",
+        "hemmeya gaNanAthanE Kanamma"
+      ]
+    }
+  ]
+}

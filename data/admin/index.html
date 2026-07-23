@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHCS Bhajans · Admin</title>
+  <link rel="preconnect" href="https://www.gstatic.com" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Decorative mandala backdrop -->
+  <div class="mandala" aria-hidden="true"></div>
+
+  <!-- ───────────────────────── LOGIN ───────────────────────── -->
+  <main id="login-view" class="view">
+    <section class="card login-card">
+      <div class="brand">
+        <div class="om" aria-hidden="true">ॐ</div>
+        <h1>SHCS Bhajans</h1>
+        <p class="sanskrit">वसुधैव कुटुम्बकम्</p>
+        <p class="subtitle">Sanatan Hindu Cultural Society · Admin</p>
+      </div>
+
+      <div id="config-warning" class="banner hidden">
+        Firebase isn't configured yet. Add your config in
+        <code>admin/firebase-config.js</code> to enable sign-in.
+      </div>
+
+      <form id="login-form" autocomplete="on">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required placeholder="••••••••" />
+
+        <button id="login-btn" type="submit" class="btn-gold">Sign in</button>
+        <p id="login-error" class="error hidden"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ───────────────────────── DASHBOARD ───────────────────────── -->
+  <main id="app-view" class="view hidden">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <span class="om-sm" aria-hidden="true">ॐ</span>
+        <span>SHCS Bhajans Admin</span>
+      </div>
+      <div class="topbar-user">
+        <span id="user-email" class="user-email"></span>
+        <button id="logout-btn" class="btn-ghost">Sign out</button>
+      </div>
+    </header>
+
+    <section class="greeting">
+      <h2 id="greeting-title">Namaste 🙏</h2>
+      <p class="subtitle">Add or update a bhajan translation. Upload a plain
+        <strong>.txt</strong> of the lyrics and Gemini will format it, or upload an
+        existing <strong>.json</strong> and Gemini will validate it against the app's schema.</p>
+    </section>
+
+    <div class="grid">
+      <!-- Left: form -->
+      <section class="card">
+        <h3>1 · Bhajan details</h3>
+
+        <label for="title">Bhajan title <span class="hint">(in the target language's script)</span></label>
+        <input id="title" type="text" placeholder="e.g. हनुमान चालीसा" />
+
+        <label for="bhajan-id">Bhajan ID <span class="hint">(folder name / slug)</span></label>
+        <input id="bhajan-id" type="text" placeholder="e.g. hanuman-chalisa" />
+        <p class="hint muted">Files are saved to <code>data/bhajans/&lt;id&gt;/&lt;language&gt;.json</code></p>
+
+        <label for="language">Language</label>
+        <select id="language">
+          <option value="english"   data-label="English">English</option>
+          <option value="hindi"     data-label="Hindi">Hindi</option>
+          <option value="gujarati"  data-label="Gujarati">Gujarati</option>
+          <option value="kannada"   data-label="Kannada">Kannada</option>
+          <option value="malayalam" data-label="Malayalam">Malayalam</option>
+          <option value="tamil"     data-label="Tamil">Tamil</option>
+          <option value="telugu"    data-label="Telugu">Telugu</option>
+          <option value="marathi"   data-label="Marathi">Marathi</option>
+        </select>
+
+        <h3 class="mt">2 · Upload file</h3>
+        <div id="dropzone" class="dropzone">
+          <input id="file-input" type="file" accept=".txt,.json" hidden />
+          <div class="dropzone-inner">
+            <div class="dropzone-icon" aria-hidden="true">⇪</div>
+            <p><strong>Choose a file</strong> or drag it here</p>
+            <p class="hint muted">Accepts <code>.txt</code> or <code>.json</code></p>
+          </div>
+        </div>
+        <p id="file-name" class="file-name hidden"></p>
+
+        <div class="example">
+          <p class="example-title">How to name your file</p>
+          <p class="example-body">
+            Import the bhajan file as
+            <code><span class="lang-token">[language]</span>.txt</code> or
+            <code><span class="lang-token">[language]</span>.json</code> —
+            e.g. <code class="live-example">hindi.txt</code>.
+          </p>
+          <details>
+            <summary>Show the JSON format Gemini produces</summary>
+<pre>{
+  "id": "hanuman-chalisa",
+  "title": "हनुमान चालीसा",
+  "lyrics": [
+    { "type": "doha", "lines": ["line one ।", "line two ॥"] },
+    { "type": "chaupai", "number": 1,
+      "lines": ["jay hanuman ...", "jay kapish ... ॥ 1 ॥"] }
+  ]
+}</pre>
+          </details>
+        </div>
+
+        <div class="actions">
+          <button id="process-btn" class="btn-gold" disabled>Format &amp; validate</button>
+          <span id="process-spinner" class="spinner hidden" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <!-- Right: result -->
+      <section class="card">
+        <h3>3 · Result</h3>
+        <div id="result-empty" class="result-empty">
+          <p class="muted">The formatted, validated JSON will appear here.</p>
+        </div>
+
+        <div id="result-panel" class="hidden">
+          <div id="validation-summary" class="validation"></div>
+          <pre id="result-json" class="result-json" contenteditable="false"></pre>
+          <div class="actions">
+            <button id="save-btn" class="btn-gold">Save to data/bhajans</button>
+            <button id="download-btn" class="btn-ghost">Download</button>
+            <button id="copy-btn" class="btn-ghost">Copy</button>
+          </div>
+          <p id="save-status" class="save-status hidden"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

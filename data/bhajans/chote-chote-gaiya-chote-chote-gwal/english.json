@@ -1,0 +1,62 @@
+{
+  "id": "chote-chote-gaiya-chote-chote-gwal",
+  "title": "Choti Choti Gaiya, Chotay Chotay Gwaal",
+  "lyrics": [
+    {
+      "type": "verse",
+      "lines": [
+        "Choti Choti Gaiya, Chotay Chotay Gwaal",
+        "Chotoso Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "Aage Aage Gaiya, Pichay Pichay Gwaal",
+        "Beech Mein Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "Kaari Kaari Gaiya, Goray Goray Gwaal",
+        "Shyam Baran Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "Ghaas Khaavay Gaiya, Dhudh Peevay Gwaal",
+        "Maakhan Khaavay Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 4,
+      "lines": [
+        "Choti Choti Lakuti, Chotay Chotay Haath",
+        "Bansi Bajaaway Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 5,
+      "lines": [
+        "Choti Choti Sakhiyaan, Madhuban Baal",
+        "Raas Rachaaway Mero Madan Gopal"
+      ]
+    },
+    {
+      "type": "verse",
+      "lines": [
+        "Choti Choti Gaiya, Chotay Chotay Gwaal",
+        "Chotoso Mero Madan Gopal",
+        "Choti Choti Gaiya, Chotay Chotay Gwaal",
+        "Chotoso Mero Madan Gopal"
+      ]
+    }
+  ]
+}

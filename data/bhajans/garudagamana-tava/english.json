@@ -1,0 +1,54 @@
+{
+  "id": "garudagamana-tava",
+  "title": "Garuḍagamana Tava",
+  "lyrics": [
+    {
+      "type": "dhyanam",
+      "lines": [
+        "garuḍagamana tava charaṇakamalamiha manasi lasatu mama nityam",
+        "manasi lasatu mama nityam ।",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ dhru.॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "jalajanayana vidhinamuchiharaṇamukha vibudhavinuta-padapadma",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ 1॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "bhujagaśayana bhava madanajanaka mama jananamaraṇa-bhayahārin",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ 2॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "śaṅkhachakradhara duṣṭadaityahara sarvalōka-śaraṇa",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ 3॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 4,
+      "lines": [
+        "agaṇita-guṇagaṇa aśaraṇaśaraṇada vidalita-suraripujāla",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ 4॥"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 5,
+      "lines": [
+        "bhaktavaryamiha bhūrikaruṇayā pāhi bhāratītīrtham",
+        "mama tāpamapākuru dēva, mama pāpamapākuru dēva ॥ 5॥"
+      ]
+    }
+  ]
+}

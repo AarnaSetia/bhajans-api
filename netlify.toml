@@ -1,0 +1,17 @@
+[build]
+  publish = "data"
+  functions = "netlify/functions"
+
+# Functions use global fetch(), which needs Node 18+.
+[build.environment]
+  AWS_LAMBDA_JS_RUNTIME = "nodejs18.x"
+
+[functions]
+  node_bundler = "esbuild"
+
+# The browser always calls /api/gemini; on the live site that maps to the
+# serverless function (which holds the secret GEMINI_API_KEY env var).
+[[redirects]]
+  from = "/api/gemini"
+  to = "/.netlify/functions/gemini"
+  status = 200

@@ -1,0 +1,8 @@
+# Bhajan data — cached for an hour, open CORS for the mobile app.
+/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+# Admin UI — never serve stale HTML/JS after a deploy.
+/admin/*
+  Cache-Control: no-cache

@@ -1,0 +1,46 @@
+{
+  "id": "krishna-nee-begane-baro",
+  "title": "Krishna Nee Begane Baro",
+  "lyrics": [
+    {
+      "type": "verse",
+      "lines": [
+        "Krishna Nee Begane Baro",
+        "Begane Baro Mukhavanne Toro"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "Kalalandige Gejje, Neelada Bavuli",
+        "Neelavarnane Natyavanaduta Baro"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "Udiyalli Udigejje, Beralalli Ungura",
+        "Koralalli Haakida Vaijayantiya Maale"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "Kasi Pitambara, Kaiyalli Kolalu",
+        "Pusida Shreegandha",
+        "Mayyolagamagama!"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 4,
+      "lines": [
+        "Tayige Bayalli Jagavannu Thorida",
+        "Jagadoddharaka Namma Udupi Shri Krishna"
+      ]
+    }
+  ]
+}

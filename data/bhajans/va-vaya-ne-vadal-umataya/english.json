@@ -1,0 +1,63 @@
+{
+  "id": "va-vaya-ne-vadal-umataya",
+  "title": "Va Vaya Ne Vadal Umatya",
+  "lyrics": [
+    {
+      "type": "verse",
+      "lines": [
+        "Va Vaya Ne Vadal Umatya,",
+        "Va Vaya Ne Vadal Umatya",
+        "Gokul Ma, Ho",
+        "Gokul Ma Tahukya Mor",
+        "Malva Aavo Sundirvar Shamaliya",
+        "Va Vaya Ne Vadal Umatya",
+        "Umatya, Umatya"
+      ]
+    },
+    {
+      "type": "verse",
+      "lines": [
+        "Vadaldi Varsi Re, Sarovar Chhali Valya",
+        "Vadaldi Varsi Re, Sarovar Chhali Valya"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 1,
+      "lines": [
+        "Sasariya Ma Mahlvu Re",
+        "Piyariya Thi Chhuta Padya",
+        "Vadaldi Varsi Re, Sarovar Chhali Valya"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 2,
+      "lines": [
+        "Mara Pag Kera Kadla Re, Viro Maro Leva Halyo",
+        "Mara Pag Kera Kadla Re",
+        "Viro Maro Leva Halyo",
+        "Veera Lai Ne Vehlo",
+        "Veera Lai Ne Vehlo",
+        "Veera Lai Ne Vehlo Avje Re",
+        "Sasariya Mare Ghere Betha",
+        "Vadaldi Varsi Re, Sarovar Chhali Valya"
+      ]
+    },
+    {
+      "type": "chaupai",
+      "number": 3,
+      "lines": [
+        "He Mara Nak Keri Nathani Re",
+        "Veero Maro Leva Halyo",
+        "Mara Nak Keri Nathani Re",
+        "Veero Maro Leva Halyo",
+        "Veera Lai Ne Vehlo",
+        "Veera Lai Ne Vehlo",
+        "Veera Lai Ne Vehlo Avje Re",
+        "Sasariya Mare Ghere Betha",
+        "Vadaldi Varsi Re Sarovar Chhali Valya"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "om-namah-shivaya",
+  "title": "Om Namah Shivaya",
+  "lyrics": [
+    {
+      "type": "verse",
+      "number": 1,
+      "lines": [
+        "Om Namah Shivaya, Om Namah Shivaya,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 1 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 2,
+      "lines": [
+        "Rameshwara Shiva Rameshwara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 2 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 3,
+      "lines": [
+        "Gangadhara Shiva Gangadhara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 3 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 4,
+      "lines": [
+        "Jatadhara Shiva Jatadhara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 4 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 5,
+      "lines": [
+        "Someshwara Shiva Someshwara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 5 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 6,
+      "lines": [
+        "Vishweshvara Shiva Vishweshvara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 6 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 7,
+      "lines": [
+        "Koteshwara Shiva Koteshwara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 7 ॥"
+      ]
+    },
+    {
+      "type": "verse",
+      "number": 8,
+      "lines": [
+        "Mahakaleshvara Mahakaleshvara,",
+        "Hara Hara Bhole, Namah Shivaya ॥ 8 ॥"
+      ]
+    }
+  ]
+}
