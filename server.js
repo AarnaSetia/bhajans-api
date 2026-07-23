@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { runGemini } = require('./lib/gemini');
+const { upsertCatalogEntry } = require('./lib/catalog');
 
 // ── Minimal .env loader (no dependency) ──────────────────────────
 // Loads KEY=VALUE lines from ./.env into process.env if the file exists.
@@ -47,7 +48,7 @@ app.post('/api/gemini', async (req, res) => {
 // Save a formatted/validated bhajan to data/bhajans/<id>/<lang>.json
 app.post('/api/save', (req, res) => {
   try {
-    const { id, lang, data } = req.body || {};
+    const { id, lang, langLabel, displayTitle, data } = req.body || {};
     if (!id || !lang || !data) {
       return res.status(400).json({ error: 'id, lang and data are required.' });
     }
@@ -56,11 +57,28 @@ app.post('/api/save', (req, res) => {
     if (!safe(id) || !safe(lang)) {
       return res.status(400).json({ error: 'id and lang may only contain letters, numbers and hyphens.' });
     }
+
+    // Write the lyrics file.
     const dir = path.join(DATA_DIR, 'bhajans', id);
     fs.mkdirSync(dir, { recursive: true });
-    const file = path.join(dir, `${lang}.json`);
-    fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n', 'utf8');
-    res.json({ ok: true, path: `data/bhajans/${id}/${lang}.json` });
+    fs.writeFileSync(path.join(dir, `${lang}.json`), JSON.stringify(data, null, 2) + '\n', 'utf8');
+
+    // Merge into catalog.json so it appears in the app.
+    const catalogFile = path.join(DATA_DIR, 'catalog.json');
+    let catalog = [];
+    if (fs.existsSync(catalogFile)) catalog = JSON.parse(fs.readFileSync(catalogFile, 'utf8'));
+    const { created, languageAdded } = upsertCatalogEntry(catalog, {
+      id, displayTitle, langKey: lang, langLabel,
+    });
+    fs.writeFileSync(catalogFile, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
+
+    res.json({
+      ok: true,
+      path: `data/bhajans/${id}/${lang}.json`,
+      created,
+      languageAdded,
+      catalogUpdated: created || languageAdded,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

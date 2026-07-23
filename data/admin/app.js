@@ -94,6 +94,7 @@ let resultData = null;   // the bhajan JSON to save
 
 const titleEl = $('title');
 const idEl = $('bhajan-id');
+const displayTitleEl = $('display-title');
 const langEl = $('language');
 const dropzone = $('dropzone');
 const fileInput = $('file-input');
@@ -105,10 +106,23 @@ let idEdited = false;
 idEl.addEventListener('input', () => { idEdited = true; });
 titleEl.addEventListener('input', () => {
   if (!idEdited) idEl.value = slugify(titleEl.value);
+  if (!displayEdited) displayTitleEl.value = titleCase(idEl.value);
   refreshProcessBtn();
 });
+// Auto-fill the app display name from the id (until edited manually)
+let displayEdited = false;
+displayTitleEl.addEventListener('input', () => { displayEdited = true; });
 langEl.addEventListener('change', updateLiveExample);
-idEl.addEventListener('input', refreshProcessBtn);
+idEl.addEventListener('input', () => {
+  if (!displayEdited) displayTitleEl.value = titleCase(idEl.value);
+  refreshProcessBtn();
+});
+
+function titleCase(slug) {
+  return String(slug).split('-').filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
 
 function slugify(s) {
   return s.toLowerCase().trim()
@@ -234,6 +248,8 @@ $('save-btn').addEventListener('click', async () => {
   if (!resultData) return;
   const id = idEl.value.trim();
   const lang = langEl.value;
+  const langLabel = langEl.selectedOptions[0]?.dataset.label || lang;
+  const displayTitle = displayTitleEl.value.trim();
   const status = $('save-status');
   status.className = 'save-status warn';
   status.textContent = 'Saving…';
@@ -249,20 +265,24 @@ $('save-btn').addEventListener('click', async () => {
     const res = await fetch('/api/save', {
       method: 'POST',
       headers,
-      body: JSON.stringify({ id, lang, data: resultData }),
+      body: JSON.stringify({ id, lang, langLabel, displayTitle, data: resultData }),
     });
     const payload = await res.json().catch(() => ({}));
 
     if (res.ok) {
       status.className = 'save-status ok';
+      const catalogNote = payload.created
+        ? ' Added to the catalog as a new bhajan.'
+        : payload.languageAdded
+          ? ` Added ${escapeHtml(langLabel)} to its catalog entry.`
+          : ' Catalog already had this language.';
       if (payload.committed) {
-        const verb = payload.updated ? 'Updated' : 'Added';
         status.innerHTML =
-          `✓ ${verb} <code>${escapeHtml(payload.path)}</code> in the repo. ` +
-          'Netlify will redeploy — it goes live in ~1–2 min.' +
-          (payload.htmlUrl ? ` <a href="${payload.htmlUrl}" target="_blank" rel="noopener">View on GitHub ↗</a>` : '');
+          `✓ Saved <code>${escapeHtml(payload.path)}</code> to the repo.` + catalogNote +
+          ' Netlify will redeploy — it goes live in ~1–2 min.' +
+          (payload.commitUrl ? ` <a href="${payload.commitUrl}" target="_blank" rel="noopener">View commit ↗</a>` : '');
       } else {
-        status.textContent = `✓ Saved to ${payload.path}`;
+        status.innerHTML = `✓ Saved to <code>${escapeHtml(payload.path)}</code>.` + catalogNote;
       }
       return;
     }
