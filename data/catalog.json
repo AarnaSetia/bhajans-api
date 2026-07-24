@@ -365,6 +365,10 @@
       {
         "key": "hindi",
         "label": "Hindi"
+      },
+      {
+        "key": "english",
+        "label": "English"
       }
     ]
   }
