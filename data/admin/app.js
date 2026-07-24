@@ -112,11 +112,13 @@ titleEl.addEventListener('input', () => {
 // Auto-fill the app display name from the id (until edited manually)
 let displayEdited = false;
 displayTitleEl.addEventListener('input', () => { displayEdited = true; });
-langEl.addEventListener('change', updateLiveExample);
+langEl.addEventListener('change', () => { updateLiveExample(); updateSavePath(); });
 idEl.addEventListener('input', () => {
   if (!displayEdited) displayTitleEl.value = titleCase(idEl.value);
+  updateSavePath();
   refreshProcessBtn();
 });
+updateSavePath(); // initial render
 
 function titleCase(slug) {
   return String(slug).split('-').filter(Boolean)
@@ -137,6 +139,14 @@ function updateLiveExample() {
   const ext = fileKind || 'txt';
   const el = document.querySelector('.live-example');
   if (el) el.textContent = `${lang}.${ext}`;
+}
+
+// Show exactly which file will be written, so the target is never ambiguous.
+function updateSavePath() {
+  const el = $('save-path');
+  if (!el) return;
+  const id = idEl.value.trim() || '<id>';
+  el.textContent = `data/bhajans/${id}/${langEl.value}.json`;
 }
 
 // Dropzone wiring
@@ -164,10 +174,9 @@ async function handleFile(file) {
   fileNameEl.textContent = `📄 ${file.name} (${fileKind.toUpperCase()}, ${fileContent.length} chars)`;
   show(fileNameEl);
 
-  // If the filename hints at a language, preselect it (e.g. hindi.txt)
-  const base = name.replace(/\.(txt|json)$/, '');
-  const match = [...langEl.options].find((o) => o.value === base);
-  if (match) langEl.value = base;
+  // NOTE: the Language dropdown is the single source of truth for which file is
+  // written — we deliberately do NOT infer/override it from the filename, so
+  // uploading e.g. an "english.txt" while "Hindi" is selected still saves hindi.json.
 
   updateLiveExample();
   refreshProcessBtn();
