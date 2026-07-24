@@ -357,5 +357,15 @@
         "label": "Malayalam"
       }
     ]
+  },
+  {
+    "id": "test-bhajan",
+    "title": "Test Bhajan",
+    "languages": [
+      {
+        "key": "hindi",
+        "label": "Hindi"
+      }
+    ]
   }
 ]
