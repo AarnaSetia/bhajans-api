@@ -352,29 +352,5 @@
         "label": "Malayalam"
       }
     ]
-  },
-  {
-    "id": "test-bhajan",
-    "title": "Test Bhajan",
-    "languages": [
-      {
-        "key": "hindi",
-        "label": "Hindi"
-      },
-      {
-        "key": "english",
-        "label": "English"
-      }
-    ]
-  },
-  {
-    "id": "bajhan-that-is-a-test",
-    "title": "Bajhan That Is A Test",
-    "languages": [
-      {
-        "key": "english",
-        "label": "English"
-      }
-    ]
   }
 ]
