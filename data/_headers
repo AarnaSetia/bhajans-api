@@ -1,7 +1,12 @@
-# Bhajan data — cached for an hour, open CORS for the mobile app.
+# JSON data files — always revalidate so deploys take effect immediately.
+/*.json
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-cache
+
+# Audio / static assets — cache aggressively (content is immutable per filename).
 /*
   Access-Control-Allow-Origin: *
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=31536000
 
 # Admin UI — never serve stale HTML/JS after a deploy.
 /admin/*
